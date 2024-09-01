@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Tools</title>
+    <style>
+        /* Unified Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: rgb(31, 109, 145);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: calc(100% - 22px); /* Full width minus padding and border */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgb(6, 132, 134);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .message {
+            background-color: rgb(11, 40, 71);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Color Flipper -->
+    <div class="container">
+        <h3>Color Flipper</h3>
+        <div class="btn-container">
+            <button onclick="setColor('red')">Red</button>
+            <button onclick="setColor('green')">Green</button>
+            <button onclick="setColor('blue')">Blue</button>
+            <button onclick="randomColor()">Random</button>
+        </div>
+    </div>
+
+    <!-- Palindrome Checker -->
+    <div class="container">
+        <h3>Palindrome Checker</h3>
+        <input id="palindrome-input" type="text" placeholder="Type anything...">
+        <button onclick="checkPalindrome()">Check</button>
+        <p id="palindrome-result" class="message">Result</p>
+    </div>
+
+    <!-- Prime Checker -->
+    <div class="container">
+        <h3>Prime Checker</h3>
+        <input id="prime-input" type="text" placeholder="Enter a number...">
+        <div class="btn-container">
+            <button onclick="checkPrime()">Check</button>
+            <button onclick="clearPrime()">Clear</button>
+        </div>
+        <p id="prime-result" class="message">Result</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
